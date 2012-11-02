@@ -3,7 +3,7 @@ NAME
     darwin (OS X) system call.
 
 VERSION
-    Version 0.01
+    Version 0.02
 
 SYNOPSIS
         sub get_perl_path {
@@ -71,6 +71,10 @@ SUPPORT
     You can find documentation for this module with the perldoc command.
 
         perldoc Mac::NSGetExecutablePath
+
+ACKNOWLEDGEMENTS
+    The implementation of this module is inspired by Nicholas Clark's work
+    of adding this feature to perl 5.16.
 
 COPYRIGHT & LICENSE
     Copyright 2012 Vincent Pit, all rights reserved.

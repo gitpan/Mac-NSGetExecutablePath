@@ -31,4 +31,4 @@ resources:
   homepage: http://search.cpan.org/dist/Mac-NSGetExecutablePath/
   license: http://dev.perl.org/licenses/
   repository: http://git.profvince.com/?p=perl%2Fmodules%2FMac-NSGetExecutablePath.git
-version: 0.01
+version: 0.02

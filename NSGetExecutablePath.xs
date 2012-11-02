@@ -8,7 +8,6 @@
 
 #include <mach-o/dyld.h>
 
-
 static const char nsgep_too_long[] = "NSGetExecutablePath() wants to return a path too large";
 
 /* --- XS ------------------------------------------------------------------ */
@@ -29,16 +28,13 @@ PPCODE:
  _NSGetExecutablePath(buf, &size);
  if (size >= MAXPATHLEN * MAXPATHLEN)
   croak(nsgep_too_long);
-#ifdef newSV_type
- dst = newSV_type(SVt_PV);
-#else
- dst = sv_newmortal();
- (void) SvUPGRADE(dst, SVt_PV);
-#endif
+ dst    = sv_newmortal();
+ sv_upgrade(dst, SVt_PV);
  buffer = SvGROW(dst, size);
  if (_NSGetExecutablePath(buffer, &size))
   croak(nsgep_too_long);
- SvCUR_set(dst, size - 1);
+ if (size)
+  SvCUR_set(dst, size - 1);
  SvPOK_on(dst);
  XPUSHs(dst);
  XSRETURN(1);

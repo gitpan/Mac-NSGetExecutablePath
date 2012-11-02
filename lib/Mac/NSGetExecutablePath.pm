@@ -11,13 +11,13 @@ Mac::NSGetExecutablePath - Perl interface to the _NSGetExecutablePath darwin (OS
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
 our $VERSION;
 BEGIN {
- $VERSION = '0.01';
+ $VERSION = '0.02';
 }
 
 =head1 SYNOPSIS
@@ -107,6 +107,10 @@ I will be notified, and then you'll automatically be notified of progress on you
 You can find documentation for this module with the perldoc command.
 
     perldoc Mac::NSGetExecutablePath
+
+=head1 ACKNOWLEDGEMENTS
+
+The implementation of this module is inspired by Nicholas Clark's work of adding this feature to perl 5.16.
 
 =head1 COPYRIGHT & LICENSE
 
