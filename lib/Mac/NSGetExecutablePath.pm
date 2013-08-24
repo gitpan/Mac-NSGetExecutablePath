@@ -11,13 +11,13 @@ Mac::NSGetExecutablePath - Perl interface to the _NSGetExecutablePath darwin (OS
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
 our $VERSION;
 BEGIN {
- $VERSION = '0.02';
+ $VERSION = '0.03';
 }
 
 =head1 SYNOPSIS
@@ -85,7 +85,7 @@ L<perl> 5.6.
 A C compiler.
 This module may happen to build with a C++ compiler as well, but don't rely on it, as no guarantee is made in this regard.
 
-L<Exporter> (core since perl 5), L<XSLoader> (since 5.006), L<base> (since 5.004_05).
+L<Exporter> (core since perl 5), L<XSLoader> (since 5.6.0), L<base> (since 5.004_05).
 
 =head1 SEE ALSO
 
@@ -114,7 +114,7 @@ The implementation of this module is inspired by Nicholas Clark's work of adding
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2012 Vincent Pit, all rights reserved.
+Copyright 2012,2013 Vincent Pit, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
